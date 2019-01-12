@@ -1,0 +1,232 @@
+// Global styling for this template
+body,
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  @include body-font;
+}
+
+hr {
+  max-width: 50px;
+  border-width: 3px;
+  border-color: $primary;
+}
+
+hr.light {
+  border-color: $white;
+}
+
+a:hover,
+a:focus,
+a:active,
+a.active {
+  outline: none;
+  color: darken($theme-primary, 10%);
+}
+
+a {
+  color: $primary;
+  @include transition-all;
+  &:hover {
+    color: darken($primary, .1);
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @include body-font;
+  font-weight: 600;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  @include body-font;
+  font-weight: 600;
+}
+
+.bg-primary {
+  background-color: $primary !important;
+}
+
+.bg-dark {
+  background-color: $gray-900 !important;
+}
+
+.text-faded {
+  color: fade-out($white, .3);
+}
+
+// Global Section Styles
+section {
+  padding: 6rem 0;
+  .section-heading {
+    margin-top: 0;
+    @include heading-font;
+  }
+  h2.section-heading {
+    font-size: 40px;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+  h3.section-subheading {
+    font-size: 16px;
+    @include serif-font;
+    text-transform: none;
+    font-style: italic;
+    font-weight: 400;
+    margin-bottom: 75px;
+  }
+}
+
+@media(min-width:768px) {
+  section {
+    padding: 110px 0;
+  }
+}
+
+::-moz-selection {
+  color: $white;
+  background: $gray-900;
+  text-shadow: none;
+}
+
+::selection {
+  color: $white;
+  background: $gray-900;
+  text-shadow: none;
+}
+
+img::selection {
+  color: $white;
+  background: transparent;
+}
+
+img::-moz-selection {
+  color: $white;
+  background: transparent;
+}
+
+$footer-author: lighten($theme-primary, 33.5%) !default;
+
+// Footer
+footer {
+  padding: 25px 0;
+  text-align: center;
+  background-color: #003b50;
+  span.copyright {
+    line-height: 40px;
+    color: white;
+    @include heading-font;
+    text-transform: none;
+    .theme-author{
+      color: $footer-author;
+      @include script-font;
+      &:hover,
+      &:focus,
+      &:active {
+        color: $theme-primary;
+        text-decoration: none;
+      }
+    }
+  }
+  ul.quicklinks {
+    margin-bottom: 0;
+    line-height: 40px;
+    @include heading-font;
+    text-transform: none;
+  }
+}
+
+// Social Buttons
+ul.social-buttons {
+  margin-bottom: 0;
+  li {
+    a {
+      display: block;
+      background-color: $gray-darker;
+      height: 40px;
+      width: 40px;
+      border-radius: 100%;
+      font-size: 20px;
+      line-height: 40px;
+      color: white;
+      outline: none;
+      -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+      transition: all 0.3s;
+      &:hover,
+      &:focus,
+      &:active {
+        background-color: $theme-primary;
+      }
+    }
+  }
+}
+
+header {
+  @include background-cover;
+  text-align: center;
+  color: white;
+
+
+  .intro-text {
+    padding-top: 300px;
+    padding-bottom: 250px;
+
+    .intro-lead-in {
+      @include serif-font;
+      font-style: italic;
+      font-size: 20px;
+      line-height: 20px;
+      margin-bottom: 15px;
+    }
+    @keyframes colours {
+      0% {color: $theme-primary}
+      25% {color: #8bc5d1;}
+      50% {color: #f8cb4a;}
+      75% {color: #8bc5d1;}
+      100% {color: $theme-primary}
+    }
+    @-webkit-keyframes colours {
+      0% {color: $theme-primary}
+      25% {color: #8bc5d1;}
+      50% {color: #f8cb4a;}
+      75% {color: #8bc5d1;}
+      100% {color: $theme-primary}
+
+    }
+    @-moz-keyframes colours {
+      0% {color: $theme-primary}
+      25% {color: #8bc5d1;}
+      50% {color: #f8cb4a;}
+      75% {color: #8bc5d1;}
+      100% {color: $theme-primary}
+
+    }
+    .intro-heading {
+      @include heading-font;
+      font-weight: 700;
+      font-size: 35px;
+      line-height: 35px;
+      margin-bottom: 25px;
+      color: $theme-primary !important;
+
+      animation-direction: normal;
+      animation-duration: 8s;
+      animation-iteration-count: infinite;
+      animation-name: colours;
+      animation-timing-function: ease;
+      -webkit-animation-direction: normal;
+      -webkit-animation-duration: 8s;
+      -webkit-animation-iteration-count: infinite;
+      -webkit-animation-name: colours;
+      -webkit-animation-timing-function: ease;
+      -moz-animation-direction: normal;
+      -moz-animation-duration: 8s;
+      -moz-animation-iteration-count: infinite;
+      -moz-animation-name: colours;
+      -moz-animation-timing-function: ease;
+    }
+  }
+}
