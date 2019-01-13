@@ -74,11 +74,18 @@ gulp.task('vendor', function (cb) {
 
   // Owl carousel
   gulp.src([
-      './node_modules/owl.carousel/dist/*.min.js',
-      './node_modules/owl.carousel/dist/assets/owl.carousel.min.css'
+    './node_modules/owl.carousel/dist/*.min.js',
+    './node_modules/owl.carousel/dist/assets/owl.carousel.min.css'
+  ])
+  .pipe(gulp.dest('./vendor/owl.carousel'))
+  .pipe(gulp.dest('./dist/vendor/owl.carousel'))
+
+  // waitforImages
+  gulp.src([
+      './node_modules/jquery.waitforimages/dist/*.min.js'
     ])
-    .pipe(gulp.dest('./vendor/owl.carousel'))
-    .pipe(gulp.dest('./dist/vendor/owl.carousel'))
+    .pipe(gulp.dest('./vendor/jquery-waitforimages'))
+    .pipe(gulp.dest('./dist/vendor/jquery-waitforimages'))
 
   cb();
 

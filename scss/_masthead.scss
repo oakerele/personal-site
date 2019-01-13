@@ -10,6 +10,7 @@ header.masthead {
   background-repeat: no-repeat;
   background-size: cover;
   @include background-cover;
+
   hr {
     margin-top: 30px;
     margin-bottom: 30px;
@@ -36,6 +37,17 @@ header.masthead {
       font-size: 4rem;
     }
   }
+}
+
+.masthead:after {
+  -moz-transition: all 4s ease;
+  -webkit-transition: all 4s ease;
+  -o-transition: all 4s ease;
+  -ms-transition: all 4s ease;
+  transition: all 4s ease;
+  background: #313148;
+  content: '';
+  height: 100%;
 }
 
 section#about {
