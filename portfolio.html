@@ -15,16 +15,12 @@
   <title>Tobi Akerele</title>
   <link rel="shortcut icon" href="img/favicon.ico" />
 
-  <!-- Google Fonts  -->
-  <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,500' rel='stylesheet' type='text/css'>
-
   <!-- Body font -->
-  <link href='https://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,700,300,600,800,400'
     rel='stylesheet'>
   <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
   <link href="https://fonts.googleapis.com/css?family=Overpass" rel="stylesheet">
-  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 
   <!-- Navbar font -->
   <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
@@ -53,10 +49,9 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
-          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-          <!--<li class="nav-item"><button class="btn btn-default" onclick="window.open('https://cash.me/$tobidae','_blank');ga('send', 'event', 'Payment', 'click', 'Payment with Square');">PayME&trade;</button></li>-->
+          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.html" onclick="ga('send', 'event', 'Home', 'click', 'Go Home');">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="portfolio.html" onclick="ga('send', 'event', 'Portfolio', 'click', 'Open Portfolio');">Portfolio</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html" onclick="ga('send', 'event', 'Contact', 'click', 'Open Contact');">Contact</a></li>
         </ul>
       </div>
     </div>
@@ -137,7 +132,7 @@
             features like
             a location tracking service that pings a user's location using the inbuilt navigation api in a browser.</p>
           <p class="links">
-              Website Link <a href="http://captivated.works" target="_blank">http://captivated.works</a></p>
+            Website Link <a href="http://captivated.works" target="_blank">http://captivated.works</a></p>
         </div>
         <div class="col-md-5 col-sm-12">
           <div class="owl-carousel owl-theme">
@@ -235,41 +230,6 @@
     </div>
   </section>
 
-  <!-- Portfolio Modal 4 -->
-  <div class="portfolio-modal modal fade" ng-repeat="project in projects" id="project-{{project.id}}" tabindex="-1"
-    role="dialog" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="close-modal" data-dismiss="modal">
-          <div class="lr">
-            <div class="rl">
-            </div>
-          </div>
-        </div>
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-              <div class="modal-body">
-                <h2>{{project.title}}</h2>
-                <p class="item-intro text-muted">{{project.subtitle}}</p>
-                <div class="owl-carousel owl-theme" ng-if="project.screenShots.length > 0">
-                  <img ng-repeat="screenshot in project.screenShots track by $index" class="item" ng-src="{{screenshot}}"
-                    alt="">
-                </div>
-                <p ng-bind-html="project.description | nl2br" style="text-align: start; padding-bottom: 10px"></p>
-                <div class="row">
-                  <span class="label label-success custom-label" ng-repeat="tech in project.techUsed">{{tech}}</span>
-                </div>
-                <button type="button" class="btn btn-primary btn-lg close-btn" data-dismiss="modal"><i class="fa fa-times"></i>
-                  Close Project</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
   <footer>
     <div class="container">
       <div class="row">
@@ -302,6 +262,11 @@
 
   <!-- Custom scripts for this template -->
   <script src="js/app.min.js"></script>
+  <script>
+    $(document).ready(() => {
+      ga('send', 'pageview');
+    });
+  </script>
 
 </body>
 

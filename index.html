@@ -15,22 +15,18 @@
   <title>Tobi Akerele</title>
   <link rel="shortcut icon" href="img/favicon.ico" />
 
-  <!-- Google Fonts  -->
-  <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,500' rel='stylesheet' type='text/css'>
-
   <!-- Body font -->
-  <link href='https://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,700,300,600,800,400'
     rel='stylesheet'>
   <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
   <link href="https://fonts.googleapis.com/css?family=Overpass" rel="stylesheet">
-  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-
+  
   <!-- Navbar font -->
   <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
 
   <!-- Plugin CSS -->
   <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
@@ -52,10 +48,9 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
-          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-          <!--<li class="nav-item"><button class="btn btn-default" onclick="window.open('https://cash.me/$tobidae','_blank');ga('send', 'event', 'Payment', 'click', 'Payment with Square');">PayME&trade;</button></li>-->
+          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.html" onclick="ga('send', 'event', 'Home', 'click', 'Go Home');">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="portfolio.html" onclick="ga('send', 'event', 'Portfolio', 'click', 'Open Portfolio');">Portfolio</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html" onclick="ga('send', 'event', 'Contact', 'click', 'Open Contact');">Contact</a></li>
         </ul>
       </div>
     </div>
@@ -76,7 +71,8 @@
           <div class="container-fluid">
             <div class="row">
               <div class="col text-center">
-                <a target="_blank" class="btn btn-primary btn-xl js-scroll-trigger" href="https://drive.google.com/open?id=1vpG_eZBDGyCAMLr46fN4p19prhtPQCqx">
+                <a target="_blank" class="btn btn-primary btn-xl js-scroll-trigger" href="https://drive.google.com/open?id=1vpG_eZBDGyCAMLr46fN4p19prhtPQCqx"
+                  onclick="ga('send', 'event', 'Resume', 'click', 'View Resume File');">
                   <i class="fa fa-download"></i>&ensp;Download Resume</a>
                 <a style="margin: 10px"></a>
                 <a href="portfolio.html" class="btn btn-primary btn-xl">Portfolio</a>
@@ -401,9 +397,11 @@
         <div class="col-md-6">
           <ul class="list-inline social-buttons">
             <li class="list-inline-item"><a target="_blank" href="https://www.linkedin.com/in/tobi-akerele/"><i class="fa fa-linkedin"></i></a></li>
-            <li class="list-inline-item"><a target="_blank" href="https://play.google.com/store/apps/dev?id=5723748668859818323"><i class="fa fa-desktop"></i></a></li>
+            <li class="list-inline-item"><a target="_blank" href="https://play.google.com/store/apps/dev?id=5723748668859818323"><i
+                  class="fa fa-desktop"></i></a></li>
             <li class="list-inline-item"><a target="_blank" href="https://github.com/tobidae"><i class="fa fa-download"></i></a></li>
-            <li class="list-inline-item"><a target="_blank" href="http://stackoverflow.com/users/2864560/tobidae"><i class="fa fa-download"></i></a></li>
+            <li class="list-inline-item"><a target="_blank" href="http://stackoverflow.com/users/2864560/tobidae"><i
+                  class="fa fa-download"></i></a></li>
           </ul>
         </div>
       </div>
@@ -422,6 +420,11 @@
   <!-- Custom scripts for this template -->
   <script src="js/app.min.js"></script>
 
+  <script>
+    $(document).ready(() => {
+      ga('send', 'pageview');
+    });
+  </script>
 </body>
 
 </html>
