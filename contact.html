@@ -92,7 +92,7 @@
 
             </div>
             <div class="col-sm-6">
-              <form action="https://formspree.io/otakerele@gmail.com" method="POST" validate id="contactForm">
+              <form role="form" method="POST" validate id="contactForm">
                 <div class="form-group">
                   <input type="text" class="form-control" placeholder="Your Name *" name="name" required
                     data-validation-required-message="Please enter your name.">
@@ -100,12 +100,17 @@
                 </div>
                 <div class="form-group">
                   <input type="email" class="form-control" placeholder="Your Email *" name="email" required
-                    data-validation-required-message="Please enter your email address.">
+                         data-validation-required-message="Please enter your email address">
+                  <p class="help-block text-danger"></p>
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="What is this about? *" name="subject" required
+                         data-validation-required-message="A subject is needed">
                   <p class="help-block text-danger"></p>
                 </div>
                 <div class="form-group">
                   <textarea class="form-control" placeholder="Your Message *" name="message" required
-                    data-validation-required-message="Please enter a message."></textarea>
+                            data-validation-required-message="Please enter a message."></textarea>
                   <p class="help-block text-danger"></p>
                 </div>
                 <div class="col-lg-12 text-center">
@@ -124,7 +129,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-6" style="text-align: left">
-          <span class="copyright">Coded with fun by <a href="https://www.linkedin.com/in/tobi-akerele/" target="_blank"
+          <span class="copyright">Coded by <a href="https://www.linkedin.com/in/tobi-akerele/" target="_blank"
               class="theme-author">Tobi Akerele</a>.&nbsp;All Rights Reserved</span>
         </div>
         <div class="col-md-6">
@@ -148,6 +153,7 @@
   <!-- Plugin JavaScript -->
   <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
   <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+  <script src="vendor/owl.carousel/owl.carousel.min.js"></script>
   <script src="vendor/jquery-waitforimages/jquery.waitforimages.min.js"></script>
 
   <!-- Custom scripts for this template -->

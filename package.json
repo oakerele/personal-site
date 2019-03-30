@@ -11,8 +11,8 @@
         "type": "git",
         "url": "https://github.com/tobidae/personal-site"
     },
-    "script": {
-        "host": "gulp build && firebase deploy --only hosting"
+    "scripts": {
+        "deploy": "gulp build && firebase deploy --project tobis-site"
     },
     "dependencies": {
         "@fortawesome/fontawesome-free": "5.6.3",

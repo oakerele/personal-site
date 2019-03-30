@@ -36,33 +36,33 @@ gulp.task('vendor', function (cb) {
       './node_modules/bootstrap/dist/css/bootstrap.min.css'
     ])
     .pipe(gulp.dest('./vendor/bootstrap'))
-    .pipe(gulp.dest('./dist/vendor/bootstrap'))
+    .pipe(gulp.dest('./dist/vendor/bootstrap'));
 
   // Font Awesome
   gulp.src([
       './node_modules/@fortawesome/fontawesome-free/css/all.min.css',
     ])
     .pipe(gulp.dest('./vendor/fontawesome-free/css'))
-    .pipe(gulp.dest('./dist/vendor/fontawesome-free/css'))
+    .pipe(gulp.dest('./dist/vendor/fontawesome-free/css'));
   gulp.src([
       './node_modules/@fortawesome/fontawesome-free/webfonts/**/*',
     ])
     .pipe(gulp.dest('./vendor/fontawesome-free/webfonts'))
-    .pipe(gulp.dest('./dist/vendor/fontawesome-free/webfonts'))
+    .pipe(gulp.dest('./dist/vendor/fontawesome-free/webfonts'));
 
   // jQuery
   gulp.src([
       './node_modules/jquery/dist/jquery.min.js'
     ])
     .pipe(gulp.dest('./vendor/jquery'))
-    .pipe(gulp.dest('./dist/vendor/jquery'))
+    .pipe(gulp.dest('./dist/vendor/jquery'));
 
   // jQuery Easing
   gulp.src([
       './node_modules/jquery.easing/*.min.js'
     ])
     .pipe(gulp.dest('./vendor/jquery-easing'))
-    .pipe(gulp.dest('./dist/vendor/jquery-easing'))
+    .pipe(gulp.dest('./dist/vendor/jquery-easing'));
 
   // Magnific Popup
   gulp.src([
@@ -70,7 +70,7 @@ gulp.task('vendor', function (cb) {
     './node_modules/magnific-popup/dist/magnific-popup.css'
     ])
     .pipe(gulp.dest('./vendor/magnific-popup'))
-    .pipe(gulp.dest('./dist/vendor/magnific-popup'))
+    .pipe(gulp.dest('./dist/vendor/magnific-popup'));
 
   // Owl carousel
   gulp.src([
@@ -78,14 +78,14 @@ gulp.task('vendor', function (cb) {
     './node_modules/owl.carousel/dist/assets/owl.carousel.min.css'
   ])
   .pipe(gulp.dest('./vendor/owl.carousel'))
-  .pipe(gulp.dest('./dist/vendor/owl.carousel'))
+  .pipe(gulp.dest('./dist/vendor/owl.carousel'));
 
   // waitforImages
   gulp.src([
       './node_modules/jquery.waitforimages/dist/*.min.js'
     ])
     .pipe(gulp.dest('./vendor/jquery-waitforimages'))
-    .pipe(gulp.dest('./dist/vendor/jquery-waitforimages'))
+    .pipe(gulp.dest('./dist/vendor/jquery-waitforimages'));
 
   cb();
 
@@ -151,7 +151,7 @@ function js() {
     .src([
       './js/*.js',
       '!./js/*.min.js',
-      '!./js/contact_me.js',
+      '!./js/email.js',
       '!./js/jqBootstrapValidation.js'
     ])
     .pipe(uglify())
