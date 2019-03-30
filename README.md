@@ -1,8 +1,10 @@
 # Tobiak.com
 
-My personal site where I show my experience and skillset. It was made in AngularJS instead of a standard HTML page
-so that I could learn AngularJS. There's a little backend that is deployed on heroku for contact form sending and more
+My personal site where I show my experience and skillset.
+It was made using vanilla HTML and CSS. There's a little backend that
+is deployed on Google cloud functions for contact form sending and more
 stuff in the future.
 
-One thing to remember about Angular 1 is that it may use a different compiler like gulp or grunt. You'll have
-to install that like so `npm install gulp-cli -g`. You may also need SCSS if you don't already have that.
+You'll have to install Gulp to compile and compress the frontend.
+It can be done using `npm install gulp-cli -g`.
+You may also need SCSS modules if you don't already have that.
