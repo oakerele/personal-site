@@ -16,7 +16,7 @@
     },
     "dependencies": {
         "@fortawesome/fontawesome-free": "5.6.3",
-        "bootstrap": "4.2.1",
+        "bootstrap": "4.3.1",
         "jquery": "3.3.1",
         "jquery.easing": "^1.4.1",
         "jquery.waitforimages": "^2.4.0",
@@ -36,6 +36,6 @@
         "gulp-plumber": "^1.2.1",
         "gulp-rename": "1.4.0",
         "gulp-sass": "4.0.2",
-        "gulp-uglify": "^3.0.1"
+        "gulp-uglify": "^3.0.2"
     }
 }
