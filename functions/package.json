@@ -14,5 +14,8 @@
     "firebase-functions": "^2.0.3",
     "sendgrid": "^5.2.3"
   },
-  "private": true
+  "private": true,
+  "engines": {
+    "node": "8"
+  }
 }
